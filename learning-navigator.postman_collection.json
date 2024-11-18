@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "6c30aa07-6558-4ddd-bf1a-4769d6cc646e",
+		"name": "learning-navigator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11595394",
+		"_collection_link": "https://galactic-firefly-715314.postman.co/workspace/crio-coderhack~956b42b3-e470-4337-a0d0-7cb09c311f36/collection/11595394-6c30aa07-6558-4ddd-bf1a-4769d6cc646e?action=share&source=collection_link&creator=11595394"
+	},
+	"item": [
+		{
+			"name": "registerStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\": {\r\n        \"subjectId\": \"sub1\",\r\n        \"subjectName\": \"Java\",\r\n        \"enrolledStudents\": [\r\n            {\r\n                \"studentName\": \"Raj\",\r\n                \"enrolledSubjects\": [\r\n                    {\r\n                        \"subjectId\" : \"sub2\",\r\n                        \"subjectName\": \"Oracle\",\r\n                        \"registeredStudents\" : [{\r\n\r\n                        }\r\n\r\n                        ],\r\n                        \"exam\" : {\r\n                            \"examId\" : \"ex2\",\r\n                            \"\"\r\n                        }\r\n                    }\r\n                ],\r\n                \"registeredExams\": [\r\n                    {}\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/exams/ex1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exams",
+						"ex1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addSubject",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subjectName\" : \"React\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/subjects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentName\" : \"Raj3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "enrollSubjectToStudent",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/students/2/subjects/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						"2",
+						"subjects",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerExam",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/students/1/subjects/2/exams/ex-2-react",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						"1",
+						"subjects",
+						"2",
+						"exams",
+						"ex-2-react"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
